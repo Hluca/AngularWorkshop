@@ -10,30 +10,29 @@
         </p>
 
         <p>
-            <div ng-show="contactForm.firstName.$error.required ||  contactForm.firstName.$error.touched">
-                <span>First Name required</span>
-            </div>
+        <div ng-show="contactForm.firstName.$error.required ||  contactForm.firstName.$error.touched">
+            <span>First Name required</span>
+        </div>
         </p>
 
         <p>
             <label for="">Last name</label><br/>
             <input type="text" name="lastName"  ng-model="contactDetailController.contact.last_name" required>
-            <div ng-show="contactForm.lastName.$error.required || contactForm.lastName.$error.touched">
-                <span >Last name required</span>
-            </div>
+        <div ng-show="contactForm.lastName.$error.required || contactForm.lastName.$error.touched">
+            <span >Last name required</span>
+        </div>
         </p>
 
         <p>
             <label for="">Email</label><br/>
             <input type="email" name='email' ng-model="contactDetailController.contact.email" required>
-            <div ng-show="contactForm.email.$error.required || contactForm.email.$error.touched">
-                <span >Email required</span>
-            </div>
+        <div ng-show="contactForm.email.$error.required || contactForm.email.$error.touched">
+            <span >Email required</span>
+        </div>
         </p>
 
         <p>
-            <input type="submit" value="Save" ng-disabled="contactForm.$invalid" ng-click="contactDetailController.submit()">
-            <robo-hash email="contactDetailController.contact.email"></robo-hash>
+            <input type="submit" value="Save" ng-disabled="contactForm.$invalid">
         </p>
     </form>
 </div>

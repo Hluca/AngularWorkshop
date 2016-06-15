@@ -7,12 +7,19 @@ import applicationState from './application-state';
 import httpProvider from './http-provider';
 import contactListComponent from 'components/contact-list/index';
 import contactDetailComponent from 'components/contact-detail/index';
+import contactService from 'components/contact-list/contact-service';
+import roboHashComponent from 'components/directive/index';
+
+
+
+
 
 const dependencies = [
     'ngCookies',
     welcomeComponent.name,
     contactListComponent.name,
-    contactDetailComponent.name
+    contactDetailComponent.name,
+    roboHashComponent.name
 ];
 
 export default angular
@@ -20,5 +27,7 @@ export default angular
     .config(config)
     .config(applicationState)
     .provider('http', httpProvider)
+    .constant('ContURL',"http://localhost:3000/api/Contacts")
+    .service('ContactService',contactService)
     .run(errorHandling);
 

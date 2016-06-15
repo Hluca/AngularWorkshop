@@ -8,6 +8,7 @@ function contactsRoute($stateProvider) {
                 main: {
                     template: template,
                     controller: 'ContactListController as contactListController'
+
                 }
             }
         });

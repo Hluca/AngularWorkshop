@@ -6,6 +6,8 @@
         <input type="text" placeholder="Search..." ng-model="search" />
     </p>
     <ul ng-repeat="contact in contactListController.contacts | filter:search">
-        <li><a ui-sref="app.contactDetail({name:contact})">{{ contact |capitalize }}</a></li>
+        <li><a ui-sref="app.contactDetail({id:contact.id})">{{contact.id}} {{contact.first_name}} {{contact.last_name}} </a></li>
     </ul>
+
+   <a ui-sref="app.contactDetail({id:-1})"> NEW</a>
 </div>
